@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Prices</title>
+</head>
+<body>
+    <h1>Recycling Prices</h1>
+    <form method="post" action="/update_prices">
+        <label for="plastic_price">Plastic Price:</label>
+        <input type="number" step="0.01" name="plastic_price" value="{{ prices['plastic'] }}" required><br>
+
+        <label for="paper_price">Paper Price:</label>
+        <input type="number" step="0.01" name="paper_price" value="{{ prices['paper'] }}" required><br>
+
+        <label for="glass_price">Glass Price:</label>
+        <input type="number" step="0.01" name="glass_price" value="{{ prices['glass'] }}" required><br>
+
+        <button type="submit">Update Prices</button>
+    </form>
+</body>
+</html>
